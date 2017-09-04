@@ -47,9 +47,6 @@
 		<a class="navbar-brand" href="<?php echo home_url(); ?>">
 			<img class="img-responsive" src="">
 		</a>
-		<div class="toggle-nav">
-			<i class="fa fa-bars" aria-hidden="true"></i>
-		</div>
  		<?php
             wp_nav_menu( array(
                 'menu'              => 'menu',

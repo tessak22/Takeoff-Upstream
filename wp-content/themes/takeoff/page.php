@@ -25,7 +25,7 @@ get_header(); ?>
 </div>
 
 <main class="site-main">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="content col-sm-9" role="main">
             	<?php get_template_part('variant', 'before-content'); ?>

@@ -26,7 +26,16 @@ $mypages = new WP_Query(array(
 
         <div class="col-md-<?php echo (has_post_thumbnail()) ? '9' : '12'; ?>">
             <h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <?php the_excerpt(); ?>
+            <?php
+                $the_content = get_the_content('', false, '');
+                if (has_excerpt() || false === strpos($the_content, '<!--more-->')) {
+                    // has custom excerpt or is missing <!--more--> tag, so show excerpt
+                    the_excerpt();
+                } else {
+                    // has no custom excerpt, so show the content up to the <!--more--> tag
+                    echo '<p>' . wp_strip_all_tags(strip_shortcodes($the_content), true) . '</p>';
+                }
+            ?>
         </div>
     </div>
 <?php endwhile; wp_reset_postdata(); ?>
