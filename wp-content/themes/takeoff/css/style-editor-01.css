@@ -1,0 +1,28 @@
+/**
+ *     project wysiwyg style
+ */
+
+/*
+body#tinymce.wp-editor {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+}
+body#tinymce.wp-editor a {
+    color: blue;
+}
+body#tinymce.wp-editor h2,
+body#tinymce.wp-editor h3 {
+    font-weight: 700;
+}
+body#tinymce.wp-editor h2 {
+    font-size: 22px;
+}
+body#tinymce.wp-editor h3 {
+    font-size: 18px;
+}
+
+*/
+
+body#tinymce.wp-editor {
+
+}

@@ -162,3 +162,31 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+
+/* Custom Functions for Takeoff theme */
+
+// Register Custom Navigation Walker
+require_once get_template_directory() . '/wp-bootstrap-navwalker.php';
+
+/**
+ * Determine if posts should use alternate title as the document title, e.g. "Blog" for a blog section
+ *
+ * @return string Title or empty string
+ */
+function takeoff_get_posts_section_title()
+{
+    $ret = '';
+    if ('post' == get_post_type()) {
+        $section_title = get_the_title(get_option('page_for_posts', true));
+        if ('' != $section_title) {
+            $ret = $section_title;
+        }
+    }
+    return $ret;
+}
+
+
+
+// Define page id constants
+define('PAGE_NAME', 1);

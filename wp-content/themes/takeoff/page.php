@@ -14,25 +14,35 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="document-header">
+    <div class="container">
+        <div class="row">
+            <div class="page-title col-md-12">
+                <h1 class="title"><?php the_field('hero_title'); ?></h1>
+            </div>
+        </div>
+    </div>
+</div>
 
-			<?php
-			while ( have_posts() ) : the_post();
+</header><!-- opened in header.php -->
 
-				get_template_part( 'template-parts/content', 'page' );
+<main class="site-main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="content col-sm-12" role="main">
+            	<?php get_template_part('variant', 'before-content'); ?>
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+                <?php
+                while (have_posts()) {
+                    the_post();
+                    get_template_part('content');
+                }
+                ?>
 
-			endwhile; // End of the loop.
-			?>
+                <?php get_template_part('variant', 'after-content'); ?>
+            </div>
+        </div>
+    </div>
+</main>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>
