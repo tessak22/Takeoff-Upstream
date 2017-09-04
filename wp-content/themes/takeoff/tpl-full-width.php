@@ -1,13 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * Template Name: Full Width (no sidebar)
  *
  * @package Takeoff
  */
@@ -27,8 +20,8 @@ get_header(); ?>
 <main class="site-main">
     <div class="container-fluid">
         <div class="row">
-            <div class="content col-sm-9" role="main">
-            	<?php get_template_part('variant', 'before-content'); ?>
+            <div class="content col-sm-12" role="main">
+                <?php get_template_part('variant', 'before-content'); ?>
 
                 <?php
                 while (have_posts()) {
@@ -39,8 +32,8 @@ get_header(); ?>
 
                 <?php get_template_part('variant', 'after-content'); ?>
             </div>
-            <?php get_sidebar(); ?>
         </div>
     </div>
 </main>
+
 <?php get_footer(); ?>

@@ -7,11 +7,11 @@
  * @package Takeoff
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'sidebar-blog' ) ) {
 	return;
 }
 ?>
 
-<aside class="sidebar col-sm-3">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+<aside class="sidebar col-sm-3">	
+	<?php dynamic_sidebar( 'sidebar-blog' ); ?>
 </aside>
