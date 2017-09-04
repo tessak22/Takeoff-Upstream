@@ -44,7 +44,7 @@ if ( ! function_exists( 'takeoff_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'takeoff' ),
+			'menu' => esc_html__( 'Main Menu', 'takeoff' ),
 		) );
 
 		/*
@@ -127,6 +127,8 @@ add_action( 'widgets_init', 'takeoff_widgets_init' );
  */
 function takeoff_scripts() {
 	wp_enqueue_style( 'takeoff-style', get_stylesheet_uri() );
+
+    wp_enqueue_style( 'takeoff-responsive', get_template_directory_uri() . '/css/style-responsive.css', array(), '1.0.0', true );
 
 	wp_enqueue_script( 'takeoff-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

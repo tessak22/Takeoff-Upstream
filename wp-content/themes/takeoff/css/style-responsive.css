@@ -1,104 +1,16 @@
-/**
- *     project responsive
- */
+
 @media only screen and (max-width: 1199px) {
-    html {font-size: 16px;}
+
 }
 
 @media only screen and (max-width: 991px) {
-    /*Responsive Off Canvas Menu*/
-    .toggle-nav {
-        display: block;
-    }
 
-    .nav-open {
-        -webkit-transform: translateX(-270px);
-        -moz-transform: translateX(-270px);
-        -ms-transform: translateX(-270px);
-        transform: translateX(-270px);
-    }
-
-    .nav-main {
-        background: #e6567a; /*Apply this BG color to html ^ too for chrome*/
-        z-index: 101;
-        display: block;
-        overflow-x: hidden;
-        position: fixed;
-        right: 0;
-        top: 0;
-        -webkit-transform: translateX(270px);
-        -moz-transform: translateX(270px);
-        -ms-transform: translateX(270px);
-        transform: translateX(270px);
-        width: 270px;
-        height: 100%;
-        padding-top: 0px;
-        margin: 0;
-    }
-
-    .nav > li {
-        display: block;
-        padding: 10px 0;
-    }
-
-    .nav > li > a {
-        color: #fff;
-        padding: 0px 15px;
-        font-size: 20px;
-    }
-
-    .nav > li > a:hover {
-        background: transparent;
-        color: #232323;
-    }
-
-    .nav > li > a:after {
-        display: none;
-    }
-    /*End of Responsive Off Canvas Menu*/
-
-    .grid-sizer, .grid-item {
-        padding: 15px;
-        width: 50%;
-    }
-
-    .grid-item--width2 { 
-        width: 50%; 
-    }
-
-    .grid-item--width3 { 
-        width: 100%; 
-    }
-
-    .grid-item--width4 { 
-        width: 100%; 
-    }
-
-    .filter-button-group .button {
-        margin-bottom: 15px;
-    }
 }
 
 @media only screen and (max-width: 767px) {
-    html { font-size: 16px; } /* http://j.eremy.net/confused-about-rem-and-em/ */
-    .grid-sizer, .grid-item {
-        padding: 15px;
-        width: 100%;
-    }
 
-    .grid-item--width2 { 
-        width: 100%; 
-    }
-
-    .grid-item--width3 { 
-        width: 100%; 
-    }
-
-    .grid-item--width4 { 
-        width: 100%; 
-    }
 }
 
 @media only screen and (max-width: 480px) {
-    html { font-size: 16px; } /* http://j.eremy.net/confused-about-rem-and-em/ */
+
 }
