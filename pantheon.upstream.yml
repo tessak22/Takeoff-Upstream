@@ -4,3 +4,11 @@
 # For more information see: https://pantheon.io/docs/pantheon-upstream-yml
 api_version: 1
 php_version: 7.0
+
+workflows:
+  # Database Clones: Notify, sanitize, and notify on db clone
+  clone_database:
+    after:
+      - type: webphp
+        description: Pull environment specific config using wp-cfm after cloning db
+        script: private/scripts/wp_cfm_after_clone.php
